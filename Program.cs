@@ -333,6 +333,7 @@ class MainClass
 }
 */
 
+/*
 using System;
 
 class MainClass
@@ -383,6 +384,116 @@ class MainClass
 
             k++;
 
+        }
+    }
+}
+*/
+
+/*
+using System;
+
+namespace FirstApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int sum = 0;
+
+            while (true)
+            {
+                Console.WriteLine("Введите число");
+                var number = Convert.ToInt32(Console.ReadLine());
+
+                if (number < 0)
+                {
+                    continue;
+                }
+                else if (number == 0)
+                {
+                    break;
+                }
+
+                sum += number;
+            }
+
+            Console.WriteLine("Итоговая сумма: {0}", sum);
+        }
+    }
+}
+*/
+
+/*
+using System;
+
+namespace FirstApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] favcolors = new string[3];
+
+            for(int i = 0; i < favcolors.Length; i++)
+            {
+                Console.WriteLine("Введите любимый цвет {0}", i + 1);
+                favcolors[i] = Console.ReadLine();
+            }
+
+            foreach(var color in favcolors)
+            {
+                switch (color)
+                {
+                    case "red":
+                    {
+                        Console.BackgroundColor = ConsoleColor.Red;
+                        Console.ForegroundColor = ConsoleColor.Black;
+
+                        Console.WriteLine("Your color is red!");
+                        break;
+                    }
+                    case "green":
+                    {
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Black;
+
+                        Console.WriteLine("Your color is green!");
+                        break;
+                    }
+                    case "cyan":
+                    {
+                        Console.BackgroundColor = ConsoleColor.Cyan;
+                        Console.ForegroundColor = ConsoleColor.Black;
+
+                        Console.WriteLine("Your color is cyan!");
+                        break;
+                    }
+                    default:
+                        continue;
+                }
+            }
+        }
+    }
+}
+*/
+
+
+using System;
+
+namespace FirstApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите свое имя:");
+
+            var name = Console.ReadLine();
+
+            for (int i = name.Length - 1; i >= 0; i--)
+            {
+                Console.Write(name[i] + " ");
+            }
         }
     }
 }
