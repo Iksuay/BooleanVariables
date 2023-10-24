@@ -570,7 +570,7 @@ class MainClass
 }
 */
 
-
+/*
 int[][] array = new int[3][];
 
 array[0] = new int[2] { 1, 2 };
@@ -585,4 +585,15 @@ foreach (var i in array)
         Console.Write(j + " ");
     }
 }
+*/
 
+int[] arr = new int[] { -1, 15, 0 , 9, -33, 6};
+
+var num = 0;
+
+for (int i = 0; i < arr.Length; i++)
+{
+    if (arr[i] > 0) num++;
+}
+
+Console.WriteLine(num);
