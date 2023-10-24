@@ -526,25 +526,12 @@ class MainClass
     {
         var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
 
-        int num;
+        int num = 0;
 
-        for (int a = 0; a < arr.Length; a++)
-        {
-            for (int b = a + 1; b < arr.Length; b++)
-            {
-                if (arr[a] > arr[b])
-                {
-                    num = arr[a];
-                    arr[a] = arr[b];
-                    arr[b] = num;
-                }
-            }
-        }
-            
         foreach (var i in arr)
         {
-            Console.Write(i);
+            num += i;
         }
-        
+        Console.WriteLine(num);
     }
 }
