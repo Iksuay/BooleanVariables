@@ -619,6 +619,7 @@ for (int i = 0; i < arr.GetLength(0); i++)
     Console.WriteLine(num);
 */
 
+/*
 using System;
 
 
@@ -644,3 +645,14 @@ for (int i = 0; i <= arr.GetUpperBound(0); i++)
 
     Console.WriteLine();
 }
+*/
+
+(string name, int age) anketa;
+
+Console.WriteLine("Введите свое имя: ");
+anketa.Item1 =  Console.ReadLine();
+Console.WriteLine("Введите свой возраст: ");
+anketa.Item2 = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Ваше имя: {0}", anketa.Item1);
+Console.WriteLine("Ваш возраст: {0}", anketa.Item2);
