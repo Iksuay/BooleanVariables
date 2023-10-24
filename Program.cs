@@ -674,12 +674,13 @@ Console.WriteLine("Ваше имя: {0}", name);
 Console.WriteLine("Ваш возраст: {0}", age);
 */
 
-using System;
-
+/* Задание 4.4.5
 (string name, string type, double age, int nameCount) Pet;
 
 Console.Write("Введите имя питомца: ");
 Pet.name = Console.ReadLine();
+
+Pet.nameCount = Pet.name.Length;
 
 Console.Write("Введите тип питомца: ");
 Pet.type = Console.ReadLine();
@@ -687,4 +688,5 @@ Pet.type = Console.ReadLine();
 Console.Write("Введите возраст питомца: ");
 Pet.age = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine($"Длина имени: {Pet.name} {Pet.name.Length} символа.");
+Console.WriteLine($"Длина имени: {Pet.name} {Pet.nameCount} символа.");
+*/
