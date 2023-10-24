@@ -659,7 +659,7 @@ Console.WriteLine("Ваше имя: {0}", anketa.Item1);
 Console.WriteLine("Ваш возраст: {0}", anketa.Item2);
 */
 
-
+/* Задание 4.4.3
 var (name, age) = ("Тамер", 25);
 Console.WriteLine("Моё имя: {0}", name);
 Console.WriteLine("Мой возраст: {0}", age);
@@ -672,3 +672,19 @@ age = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("Ваше имя: {0}", name);
 Console.WriteLine("Ваш возраст: {0}", age);
+*/
+
+using System;
+
+(string name, string type, double age, int nameCount) Pet;
+
+Console.Write("Введите имя питомца: ");
+Pet.name = Console.ReadLine();
+
+Console.Write("Введите тип питомца: ");
+Pet.type = Console.ReadLine();
+
+Console.Write("Введите возраст питомца: ");
+Pet.age = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine($"Длина имени: {Pet.name} {Pet.name.Length} символа.");
