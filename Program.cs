@@ -518,19 +518,33 @@ class MainClass
 
 
 using System;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 class MainClass
 {
     public static void Main(string[] args)
     {
-        int[,] array = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 }, { 10, 11, 12 } };
+        var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
 
-        for (int i = 0; i < array.GetUpperBound(1) + 1; i++)
+        int num;
+
+        for (int a = 0; a < arr.Length; a++)
         {
-            for (int k = 0; k < array.GetUpperBound(0) + 1; k++)
-                Console.Write(array[k, i] + " ");
-
-            Console.WriteLine();
+            for (int b = a + 1; b < arr.Length; b++)
+            {
+                if (arr[a] > arr[b])
+                {
+                    num = arr[a];
+                    arr[a] = arr[b];
+                    arr[b] = num;
+                }
+            }
         }
+            
+        foreach (var i in arr)
+        {
+            Console.Write(i);
+        }
+        
     }
 }
