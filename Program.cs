@@ -600,6 +600,7 @@ for (int i = 0; i < arr.Length; i++)
 Console.WriteLine(num);
 */
 
+/*
 using System;
 
 int[,] arr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
@@ -616,3 +617,30 @@ for (int i = 0; i < arr.GetLength(0); i++)
         
 }
     Console.WriteLine(num);
+*/
+
+using System;
+
+
+int[,] arr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
+
+int temp;
+
+for (int i = 0; i <= arr.GetUpperBound(0); i++)
+{
+    for(int j = 0; j <= arr.GetUpperBound(1); j++)
+    {
+        for (int a = j + 1; a <= arr.GetUpperBound(1); a++)
+        {
+            if (arr[i, j] > arr[i, a])
+            {
+                temp = arr[i, a];
+                arr[i, a] = arr[i, j];
+                arr[i, j] = temp;
+            }
+        }
+        Console.Write(arr[i, j] + " ");
+    }
+
+    Console.WriteLine();
+}
