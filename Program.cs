@@ -587,6 +587,7 @@ foreach (var i in array)
 }
 */
 
+/*
 int[] arr = new int[] { -1, 15, 0 , 9, -33, 6};
 
 var num = 0;
@@ -597,3 +598,21 @@ for (int i = 0; i < arr.Length; i++)
 }
 
 Console.WriteLine(num);
+*/
+
+using System;
+
+int[,] arr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
+
+var num = 0;
+
+for (int i = 0; i < arr.GetLength(0); i++)
+{
+
+    for (int k = 0; k < arr.GetLength(1); k++)
+    {
+        if (arr[i, k] > 0) num++;
+    }
+        
+}
+    Console.WriteLine(num);
