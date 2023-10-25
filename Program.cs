@@ -690,3 +690,63 @@ Pet.age = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine($"Длина имени: {Pet.name} {Pet.nameCount} символа.");
 */
+using System;
+using System.Reflection.Metadata;
+
+class MainClass
+{
+    static void Main(string[] args)
+    {
+        (string name, string lastName, string login, int loginCount, bool pet, int age, string[] color) Anketa;
+
+        for (int k = 0; k < 3;  k++)
+        {
+            Console.WriteLine("Введите имя");
+            Anketa.name = Console.ReadLine();
+
+            Console.WriteLine("Введите фамилию");
+            Anketa.lastName = Console.ReadLine();
+
+            Console.WriteLine("введите логин");
+            Anketa.login = Console.ReadLine();
+
+            //Вычисление длины логина
+
+            Anketa.loginCount = Anketa.login.Length;
+
+            //Наличие/отсутствие животных
+
+            Console.WriteLine("Есть ли у вас животные? Да или Нет");
+
+            var result = Console.ReadLine();
+
+            if (result == "Да")
+            {
+                Anketa.pet = true;
+            }
+
+            else if (result == "да")
+            {
+                Anketa.pet = true;
+            }
+
+            else
+            {
+                Anketa.pet = false;
+            }
+
+            //Ввод возраста пользователя и трех его любимых цветов
+
+            Console.WriteLine("Введите свой возраст");
+            Anketa.age = Convert.ToInt32(Console.ReadLine());
+
+            Anketa.color = new string[3];
+
+            Console.WriteLine("Введите три своих любимыхцвета");
+            for (int i = 0; i < Anketa.color.Length; i++)
+            {
+                Anketa.color[i] = Console.ReadLine();
+            }
+        }
+    }
+}
